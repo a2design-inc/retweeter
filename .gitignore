@@ -2,3 +2,4 @@ node_modules/**/*
 twitterstream.pid
 log/**/*
 npm-debug.log
+retweeter.json
