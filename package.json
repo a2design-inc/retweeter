@@ -1,0 +1,36 @@
+{
+  "name": "retweeter",
+  "version": "0.0.1",
+  "description": "Simple open source server tool based on NodeJS to help you promote your brand in Twitter",
+  "main": "index.js",
+  "bin": {
+    "retweeter": "retweeter.js"
+  },
+  "dependencies": {
+    "twitter": "~0.2.12",
+    "underscore": "~1.7.0",
+    "kefir": "~0.2.6",
+    "daemonize2": "~0.4.2",
+    "liftoff": "~0.13.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/a2design-company/retweeter"
+  },
+  "keywords": [
+    "Twitter",
+    "Promote",
+    "Stream",
+    "Retweet"
+  ],
+  "author": "Artёm Pavlov <pavl0ff@ya.ru> (https://github.com/temapavloff)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a2design-company/retweeter/issues"
+  },
+  "homepage": "https://github.com/a2design-company/retweeter"
+}

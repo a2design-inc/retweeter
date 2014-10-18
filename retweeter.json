@@ -1,0 +1,15 @@
+{
+	"twitter_credentials": {
+		"consumer_key": "TXX6c1rkunknhCf1Ktud7A",
+	    "consumer_secret": "NLReBVlhGMQLZPpjQ4aBrAnPqXXPZUjMveYQMPH1uY",
+	    "access_token_key": "1113409896-h28wg4uEy2UksrhjOJjC1nfg2AcG7HnMSwtq5v7",
+	    "access_token_secret": "PoYLKCS2xAPef25FnlJ16m5vKQg5eB09QaGTrYhZOo"
+	},
+	"positive": [
+		"@temapavloff",
+		"#retweeter"
+	],
+	"nagative": [
+		"bullshit"
+	]
+}
