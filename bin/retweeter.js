@@ -4,7 +4,6 @@
 
 var Liftoff = require('liftoff');
 var daemonizer = require('daemonize2');
-// var retweeter = require('./../index.js');
 
 var cli = new Liftoff({
 	  name: 'retweeter',
@@ -20,13 +19,12 @@ cli.launch({}, invoke);
 
 function invoke (env) {
 	var configPath = env.configPath;
-	var config = require(configPath);
-	// console.log(env);
 
 	// var daemon = daemonizer.setup({
 	// 	main: env.modulePath,
 	// 	name: 'twitterstream',
-	// 	pidfile: 'twitterstream.pid'
+	// 	pidfile: 'twitterstream.pid',
+	//	argv: [configPath]
 	// });
 
 	// switch (process.argv[2]) {
