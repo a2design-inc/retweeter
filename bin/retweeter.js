@@ -20,24 +20,24 @@ cli.launch({}, invoke);
 function invoke (env) {
 	var configPath = env.configPath;
 
-	// var daemon = daemonizer.setup({
-	// 	main: env.modulePath,
-	// 	name: 'twitterstream',
-	// 	pidfile: 'twitterstream.pid',
-	//	argv: [configPath]
-	// });
+	var daemon = daemonizer.setup({
+		main: env.modulePath,
+		name: 'twitterstream',
+		pidfile: 'twitterstream.pid',
+		argv: [configPath]
+	});
 
-	// switch (process.argv[2]) {
+	switch (process.argv[2]) {
 
-	//     case 'start':
-	//         daemon.start();
-	//         break;
+	    case 'start':
+	        daemon.start();
+	        break;
 
-	//     case 'stop':
-	//         daemon.stop();
-	//         break;
+	    case 'stop':
+	        daemon.stop();
+	        break;
 
-	//     default:
-	//         console.log('Usage: [start|stop]');
-	// }
+	    default:
+	        console.log('Usage: [start|stop]');
+	}
 }
