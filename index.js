@@ -12,12 +12,12 @@ var negative = builder.getFilters();
 var twitterStream = new TwitterStream(config.twitter_credentials, positive);
 var retweeter = twitterStream.getClient();
 var stream = twitterStream.getStream();
-var filteredStream = stream.filter(function filter(tweet) {
-	
-	// Prevent recursive retweeting
-	if (tweet.retweeted_status !== undefined) {
-		return false;
-	}
+
+function skipRetweeted(tweet) {
+	return tweet.retweeted_status === undefined;
+}
+
+function moderate(tweet) {
 
 	// Return false if one of negative filters matches with tweet 
 	for(var i = 0; i < negative.length; i += 1) {
@@ -27,11 +27,16 @@ var filteredStream = stream.filter(function filter(tweet) {
 	}
 
 	return true;
-});
+}
 
-filteredStream.onValue(function (tweet) {
+function retweet(tweet) {
 	var url = '/statuses/retweet/' + tweet.id_str + '.json';
 	retweeter.post(url, function(result) {
 		console.log(result);
 	});
-})
+}
+
+stream
+	.filter(skipRetweeted)
+	.filter(moderate)
+	.onValue(retweet);
