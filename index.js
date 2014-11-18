@@ -19,7 +19,7 @@ var filteredStream = stream.filter(function filter(tweet) {
 		return false;
 	}
 
-	// If one of negative filters match with tweet return false
+	// Return false if one of negative filters matches with tweet 
 	for(var i = 0; i < negative.length; i += 1) {
 		if(negative[i](tweet) === true) {
 			return false;
