@@ -1,0 +1,31 @@
+{
+	// Put here you twitter app's keys
+	"twitter_credentials": {
+		"consumer_key": "YOUR_CONSUMER_KEY",
+		"consumer_secret": "YOUR_CONSUMER_SECRET",
+		"access_token_key": "YOUR_TOKEN_KEY",
+		"access_token_secret": "YOUR_TOKEN_SECRET"
+	},
+
+	"positive": [
+		"@retweeter_app", // Retweet @retweeter_app's mentions,
+		"#retweeter",	// posts tagged by #retweeter hashtag,
+		"nodejs", // posts about nodejs
+		{
+			"lat": 51.5286416, // ...and tweets from London
+			"lng": -0.1015987,
+			"distance": 10
+		}
+	],
+
+	// Filter rude tweets and tweets from South Pole
+	"negative": [
+		"sucks",
+		"boolshit",
+		{
+			"lat": -89.9899009,
+			"lng": 0,
+			"distance": 100
+		}
+	]
+}
